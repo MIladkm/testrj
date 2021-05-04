@@ -1,0 +1,50 @@
+<div>
+    <h1 class='txt'>header</h1>
+</div>
+<app-form-select (newItemEvent)="changeYear()"></app-form-select>
+<form  #myForm="ngForm" [formGroup]="registrationForm"(ngSubmit)="onSubmit()">
+    <mat-card class="example-card">
+        <mat-card-content>
+            <div class="A1"  *ngFor="let control of dynamicFormArray" [ngSwitch]="control.Type">
+
+                <mat-form-field appearance="fill" class="example-full-width" *ngSwitchCase="'input'">
+                    <mat-label>{{control.Label}}</mat-label>
+                    <input matInput formControlName="{{control.ID}}" name="{{control.ID}}"
+                        [attr.placeholder]="control.Label" value="">
+                </mat-form-field>
+
+                <mat-radio-group appearance="fill" formControlName="{{control.ID}}" name="{{control.ID}}" *ngSwitchCase="'radio'" aria-label="control.Label">
+                    <mat-radio-button 
+                        *ngFor="let val of control.Value.split(',')" [value]="val">
+                        {{val}}
+                    </mat-radio-button>
+                </mat-radio-group>
+
+                <mat-form-field appearance="fill" *ngSwitchCase="'date'">
+                    <mat-label >{{control.ID}}</mat-label>
+                    <input required #DatePiker matInput [matDatepicker]="Date" 
+                    formControlName="{{control.ID}}"name="{{control.ID}}" >
+                    <mat-datepicker-toggle matSuffix [for]="Date "></mat-datepicker-toggle>
+                    <mat-datepicker #Date></mat-datepicker>
+                </mat-form-field>
+
+           
+                <mat-form-field appearance="fill" *ngSwitchCase="'select'" >
+                    <mat-label>{{control.ID}}</mat-label>
+                    <mat-select formControlName="{{control.ID}}" >
+                        <mat-option *ngFor="let val of control.Value.split(',')" [value]="val">
+                            {{val}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field> 
+
+            </div>
+            <mat-card-actions class="A1"*ngIf='this.dynamicFormArray'>
+                <button mat-raised-button color="primary"type='submit'
+                >Send Data</button>
+                <!-- [disabled]="!myForm.valid" -->
+            </mat-card-actions>
+        </mat-card-content >
+    </mat-card>
+
+</form>

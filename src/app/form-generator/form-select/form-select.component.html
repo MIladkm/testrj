@@ -1,0 +1,9 @@
+<section class="el">
+  <mat-form-field appearance="fill">
+      <mat-label>Select</mat-label>
+      <mat-select  (selectionChange)="SendYear($event)">
+        <mat-option value="{{y}}" *ngFor="let y of years">{{y}}</mat-option>
+        
+      </mat-select>
+  </mat-form-field>
+</section>

@@ -1,0 +1,12 @@
+.A1 {
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+}
+.A1>mat-form-filed {
+    display: inline;
+}
+.txt{
+    text-align: center;
+    padding: .1rem;
+}

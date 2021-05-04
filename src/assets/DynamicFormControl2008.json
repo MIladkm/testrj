@@ -1,0 +1,67 @@
+[
+    {
+        "ID":"FirstName",
+        "Label":"First Name" ,
+        "Type":"input",
+        "Value":""
+    },
+    {
+        "ID":"LastName",
+        "Label":"Last Name" ,
+        "Type":"input",
+        "Value":""
+    },
+    {
+        "ID":"MobileNo",
+        "Label":"Mobile No" ,
+        "Type":"input",
+        "Value":""
+    },
+
+    {
+        "ID":"DOB",
+        "Label":"Date Of Birthday" ,
+        "Type":"date",
+        "Value":""
+    }, {
+        "ID":"EmailId",
+        "Label":"Email" ,
+        "Type":"input",
+        "Value":""
+    },
+    {
+        "ID":"Gender",
+        "Label":"Gender" ,
+        "Type":"radio",
+        "Value":"Male,Female"
+    },{
+        "ID":"Address",
+        "Label":"Address" ,
+        "Type":"input",
+        "Value":""
+    },
+    
+    {
+        "ID":"State",
+        "Label":"State" ,
+        "Type":"select",
+        "Value":"rey, shahriar, firoozkoh, andisheh,"
+    },{
+        "ID":"Address",
+        "Label":"Address" ,
+        "Type":"input",
+        "Value":""
+    },
+    {
+        "ID":"City",
+        "Label":"City" ,
+        "Type":"select",
+        "Value":"Tehran, Shiraz, Esfahan, Kish, Rasht, Karaj"
+    },
+    {
+        "ID":"State",
+        "Label":"State" ,
+        "Type":"select",
+        "Value":"rey, shahriar, firoozkoh, andisheh,"
+    }
+]
